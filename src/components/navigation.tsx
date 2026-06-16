@@ -83,12 +83,12 @@ export function Navigation() {
           >
             <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center luxury-shadow overflow-hidden">
               <Image
-                src="/media/logo/nsf-logo.jpeg?v=3"
-                alt="NSF Logo"
-                width={48}
-                height={48}
-                className="w-full h-full object-cover"
-              />
+  src="/media/logo/logo.jpeg"
+  alt="NSF Logo"
+  width={48}
+  height={48}
+  className="w-full h-full object-cover"
+/>
             </div>
             <div>
               <h1 className="text-white font-display font-bold text-lg">
