@@ -6,6 +6,7 @@ import { Menu, X, Phone, Mail, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
+import Image from "next/image";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -81,9 +82,11 @@ export function Navigation() {
             className="flex items-center space-x-3"
           >
             <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center luxury-shadow overflow-hidden">
-              <img
+              <Image
                 src="/media/logo/nsf-logo.jpeg?v=3"
                 alt="NSF Logo"
+                width={48}
+                height={48}
                 className="w-full h-full object-cover"
               />
             </div>

@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import Image from "next/image";
 
 export function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,13 +53,13 @@ export function Reviews() {
     },
   ];
 
-  const nextReview = () => {
+  const nextReview = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % reviews.length);
-  };
+  }, []);
 
-  const prevReview = () => {
+  const prevReview = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
-  };
+  }, []);
 
   // Auto-scroll every 6 seconds
   useEffect(() => {
@@ -69,7 +70,7 @@ export function Reviews() {
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [isAutoScroll]);
+  }, [isAutoScroll, nextReview]);
 
   // Pause auto-scroll on user interaction
   const handleInteraction = () => {
@@ -127,13 +128,15 @@ export function Reviews() {
                   <CardContent className="p-8 md:p-12">
                     <Quote className="h-12 w-12 text-luxury-gold mb-6 opacity-50" />
                     <p className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-8">
-                      "{reviews[currentIndex].text}"
+                      &ldquo;{reviews[currentIndex].text}&rdquo;
                     </p>
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                       <div className="flex items-center space-x-4">
-                        <img
+                        <Image
                           src={reviews[currentIndex].image}
                           alt={reviews[currentIndex].name}
+                          width={64}
+                          height={64}
                           className="w-16 h-16 rounded-full object-cover border-2 border-luxury-gold"
                         />
                         <div>

@@ -100,7 +100,7 @@ export function Booking() {
                     Booking Submitted Successfully!
                   </h3>
                   <p className="text-gray-400 mb-6">
-                    We'll confirm your appointment via WhatsApp shortly.
+                    We&apos;ll confirm your appointment via WhatsApp shortly.
                   </p>
                   <p className="text-gold-500 font-medium">
                     Thank you for choosing Nithya Sri Fashion Culture

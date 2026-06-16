@@ -61,7 +61,7 @@ export function Contact() {
             Get in <span className="gold-text-gradient">Touch</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
           </p>
         </motion.div>
 
@@ -76,7 +76,7 @@ export function Contact() {
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
               <p className="text-gray-400 mb-8">
-                Visit our boutique or reach out to us through any of the following channels. We're here to help you with all your tailoring needs.
+                Visit our boutique or reach out to us through any of the following channels. We&apos;re here to help you with all your tailoring needs.
               </p>
             </div>
 
@@ -176,7 +176,7 @@ export function Contact() {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-400">
-                      We'll get back to you within 24 hours.
+                      We&apos;ll get back to you within 24 hours.
                     </p>
                   </motion.div>
                 ) : (

@@ -155,7 +155,7 @@ export function Pricing() {
                 Request a Custom Quote
               </CardTitle>
               <p className="text-gray-400 text-center">
-                Fill out the form below and we'll get back to you with a detailed quote
+                Fill out the form below and we&apos;ll get back to you with a detailed quote
               </p>
             </CardHeader>
             <CardContent>
@@ -172,7 +172,7 @@ export function Pricing() {
                     Quote Request Sent!
                   </h3>
                   <p className="text-gray-400 mb-6">
-                    We'll send you a detailed quote via WhatsApp within 24 hours.
+                    We&apos;ll send you a detailed quote via WhatsApp within 24 hours.
                   </p>
                   <p className="text-gold-500 font-medium">
                     Thank you for choosing Nithya Sri Fashion Culture
