@@ -67,21 +67,21 @@ export function Navigation() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? "bg-luxury-navy/80 backdrop-blur-lg border-b border-luxury-gold/20 py-4" 
-          : "bg-transparent py-6"
+      className={`fixed top-0 left-0 right-0 z-[9999] transition-all duration-300 ${
+        scrolled
+          ? "bg-luxury-navy/80 backdrop-blur-lg border-b border-luxury-gold/20"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between">
+      <div className="w-full px-3 md:px-6 lg:container lg:mx-auto">
+        <div className="flex items-center justify-between py-2 md:py-0">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center space-x-3"
           >
-            <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center luxury-shadow overflow-hidden">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full gold-gradient flex items-center justify-center luxury-shadow overflow-hidden">
               <Image
                 src="/media/logo/nsf-logo.jpeg"
                 alt="NSF Logo"
@@ -91,10 +91,10 @@ export function Navigation() {
               />
             </div>
             <div>
-              <h1 className="text-white font-display font-bold text-lg">
+              <h1 className="text-white font-display font-bold text-sm md:text-base lg:text-lg">
                 Nithya Sri
               </h1>
-              <p className="text-luxury-gold text-xs font-medium">
+              <p className="text-luxury-gold text-xs md:text-sm font-medium">
                 Fashion Culture
               </p>
             </div>
@@ -151,27 +151,27 @@ export function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden flex items-center space-x-4">
+          <div className="lg:hidden flex items-center space-x-2">
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               suppressHydrationWarning
-              className="text-luxury-gold"
+              className="text-luxury-gold h-9 w-9"
             >
               {mounted && theme === "dark" ? (
-                <Sun className="h-5 w-5" />
+                <Sun className="h-4 w-4" />
               ) : (
-                <Moon className="h-5 w-5" />
+                <Moon className="h-4 w-4" />
               )}
             </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-luxury-gold"
+              className="text-white hover:text-luxury-gold h-9 w-9"
             >
-              {isOpen ? <X /> : <Menu />}
+              {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
